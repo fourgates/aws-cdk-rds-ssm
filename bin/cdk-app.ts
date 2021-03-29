@@ -6,7 +6,7 @@ import { CdkBaseStack } from '../lib/cdk-base-stack/cdk-base-stack';
 class DemoApp extends Construct{
     constructor(scope: Construct, id:string){
         super(scope,id);
-        const base:CdkBaseStack = new CdkBaseStack(this, 'CdkVpcStack');
+        const base:CdkBaseStack = new CdkBaseStack(this, `CdkVpcStack-${id}`);
     }
 }
 const app = new cdk.App();
