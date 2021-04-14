@@ -6,7 +6,7 @@ export interface CdkBaseStackProps extends cdk.StackProps {
 }
 
 export class CdkBaseStack extends cdk.Stack {
-  private readonly vpc:ec2.Vpc;
+  public readonly vpc:ec2.Vpc;
   constructor(scope: cdk.Construct, id: string, props?: CdkBaseStackProps) {
     super(scope, id, props);
 
@@ -19,7 +19,4 @@ export class CdkBaseStack extends cdk.Stack {
 
     this.vpc = vpc;
   }
-  get stackVpc() : ec2.Vpc{
-    return this.vpc;
-  }  
 }
