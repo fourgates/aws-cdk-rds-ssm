@@ -11,6 +11,7 @@ class DemoApp extends Construct{
             stage: id, 
             description: "Base VPC for AWS Cloud Application",
             tags: {env: id},
+            yourIpAddres: "",
             stackName: `PublicVpcStack-${id}` // used in cloudformation for naming stack
         }        
 
